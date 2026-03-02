@@ -21,10 +21,4 @@ def home():
 def inventory(user_id: int, x_api_key: str = ""):
     if x_api_key != API_SECRET:
         return {"error": "Unauthorized"}
-
-    return {
-        "userId": user_id,
-        "items": [
-            {"type": "Gamepass", "name": "VIP", "price": 100}
-        ]
-    }
+    return {"items": [{"type": "Gamepass","name":"VIP","price":100}]}
